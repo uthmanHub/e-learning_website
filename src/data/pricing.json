@@ -1,0 +1,72 @@
+[
+    {
+        "id": "01",
+        "type": "free plan",
+        "amount": "0",
+        "feature": [
+            {
+                "id": 1,
+                "content": "Access to selected free courses."
+            },
+            {
+                "id": 2,
+                "content": "Limited course materials and resources."
+            },
+            {
+                "id": 3,
+                "content": "Basic community support."
+            },
+            {
+                "id": 4,
+                "content": "No certification upon completion."
+            },
+            {
+                "id": 5,
+                "content": "Ad-supported platform."
+            },
+            {
+                "id": 6,
+                "content": "Access to exclusive Pro Plan community forums."
+            },
+            {
+                "id": 7,
+                "content": "Early access to new courses and updates."
+            }
+        ]
+    },
+    {
+        "id": "01",
+        "type": "pro plan",
+        "amount": "79",
+        "feature": [
+            {
+                "id": 0,
+                "content": "Unlimited access to all courses."
+            },
+            {
+                "id": 1,
+                "content": "Unlimited course materials and resources."
+            },
+            {
+                "id": 2,
+                "content": "Priority support from instructors."
+            },
+            {
+                "id": 3,
+                "content": "Course completion certificates."
+            },
+            {
+                "id": 4,
+                "content": "Ad-free experience."
+            },
+            {
+                "id": 5,
+                "content": "Access to exclusive Pro Plan community forums."
+            },
+            {
+                "id": 6,
+                "content": "Early access to new courses and updates."
+            }
+        ]
+    }
+]
