@@ -1,24 +1,8 @@
 import data from "@/data/about.json";
-import { CgGym } from "react-icons/cg";
-import { FaAward } from "react-icons/fa";
-import { FaMasksTheater } from "react-icons/fa6";
-import { GiQueenCrown, GiWhiteBook } from "react-icons/gi";
-import { MdNoteAlt } from "react-icons/md";
-import { RiAlarmWarningFill, RiShieldFlashFill } from "react-icons/ri";
+import Image from "next/image";
 import "./about.css";
 
 const page = () => {
-  const achievedIcon = {
-    crown: <GiQueenCrown className='icon' />,
-    win: <FaAward className='icon' />,
-    feedback: <FaMasksTheater className='icon' />,
-    partnership: <RiShieldFlashFill className='icon' />,
-    note: <MdNoteAlt className='icon' />,
-    book: <GiWhiteBook className='icon' />,
-    gym: <CgGym className='icon' />,
-    alart: <RiAlarmWarningFill className='icon' />,
-  };
-
   return (
     <div className='mt-10 flex flex-col w-full gap-10  md:mt-20  md:gap-[60px] lg:gap-[80px]'>
       {/* ABOUT INTRODUCTION */}
@@ -61,7 +45,13 @@ const page = () => {
                           key={id}
                           className='p-[30px] md:p-10 space-y-6 bg-white rounded-md'
                         >
-                          <span>{achievedIcon[icon]}</span>
+                          <Image
+                            src={icon}
+                            alt={title}
+                            width={100}
+                            height={100}
+                            className='w-fit h-fit'
+                          />
                           <div className='space-y-6'>
                             <h4 className='font-medium text-lg text-gray15 md:text-[20px] lg:text-2xl'>
                               {title}
