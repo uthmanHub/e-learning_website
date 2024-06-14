@@ -35,6 +35,6 @@
     "src/app/login/page.tsx",
     "src/app/course/page.tsx",
     "src/app/course/[title]/page.tsx"
-, "src/components/ui/NavBar.jsx"  ],
+, "src/components/ui/NavBar.jsx", "src/app/page.jsx"  ],
   "exclude": ["node_modules"]
 }

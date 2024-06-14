@@ -1,6 +1,7 @@
 import data from "@/data/about.json";
 import Image from "next/image";
 import "./about.css";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -23,7 +24,7 @@ const page = () => {
       {/* ACHIEVEMENTS AND GOALS MAPPING */}
       <div className='space-y-[50px] '>
         {data &&
-          data.map(({ id, name, intro, pride }) => {
+          data.map(({ id, name, intro, achievements }) => {
             return (
               <div key={id} className='space-y-[50px] '>
                 {/* text */}
@@ -31,15 +32,15 @@ const page = () => {
                   <h3 className='font-medium text-2xl text-gray15 md:text-[30px] lg:text-[48px]'>
                     {name}
                   </h3>
-                  <p className='font-normal text-sm text-gray35 md:text-base lg:text-lg'>
+                  <p className='font-normal mt-2 text-sm text-gray35 md:text-base lg:text-lg'>
                     {intro}
                   </p>
                 </div>
 
-                {/* card from pride*/}
+                {/* card from achievements*/}
                 <div className='grid  gap-5 md:grid-cols-2'>
-                  {pride &&
-                    pride.map(({ id, icon, title, content }) => {
+                  {achievements &&
+                    achievements.map(({ id, icon, title, content }) => {
                       return (
                         <div
                           key={id}
@@ -83,9 +84,11 @@ const page = () => {
         </div>
 
         <div className='flex justify-between'>
-          <button className='bg-primary text-white py-[14px] px-5 rounded-md min-w-fit '>
-            Join Now
-          </button>
+          <Link href={"/sign-up"}>
+            <button className='bg-primary text-white py-[14px] px-5 rounded-md min-w-fit '>
+              Join Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

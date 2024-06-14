@@ -1,5 +1,6 @@
 import data from "@/data/courses.json";
 import Image from "next/image";
+import Link from "next/link";
 
 const Courses = () => {
   return (
@@ -75,9 +76,11 @@ const Courses = () => {
                       </div>
                     </div>
 
-                    <button className='mt-auto capitalize w-full rounded-md px-6 py-[14px] bg-white95 text-gray15 font-medium text-sm lg:text-lg '>
-                      get it now
-                    </button>
+                    <Link href={`/course/${title}`}>
+                      <button className='mt-auto capitalize w-full rounded-md px-6 py-[14px] bg-white95 text-gray15 font-medium text-sm lg:text-lg '>
+                        get it now
+                      </button>
+                    </Link>
                   </div>
                 );
               }

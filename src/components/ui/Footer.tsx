@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   AiFillFacebook,
   AiFillLinkedin,
@@ -14,14 +15,16 @@ const Footer = () => {
     <div className='px-5 pt-[50px] bg-white mt-20 rounded-lg lg:px-10 '>
       <div className='flex flex-col mb-5 gap-5 justify-between items-center w-full md:flex-row md:justify-between'>
         <div className='grid gap-[30px] w-full'>
-          <Image
-            src={logo}
-            alt='company logo'
-            priority
-            width={100}
-            height={100}
-            className='size-10 '
-          />
+          <Link href={"/"}>
+            <Image
+              src={logo}
+              alt='company logo'
+              priority
+              width={100}
+              height={100}
+              className='size-10 '
+            />
+          </Link>
 
           <div className='grid gap-3'>
             {[
@@ -85,31 +88,35 @@ const Footer = () => {
             <div className='flex gap-3'>
               {[
                 {
-                  link: "facebook.com",
+                  name: "Facbook handle",
+                  link: "facebook.com/saraphadeen.uthman",
                   icon: <AiFillFacebook size={24} />,
                 },
                 {
-                  link: "twitter.com",
+                  name: "twitter handle",
+                  link: "twitter.com/UthmanCod",
                   icon: <AiOutlineTwitter size={24} />,
                 },
                 {
-                  link: "linkedin.com",
+                  name: "LinkedIn handle",
+                  link: "linkedin.com/in/dev-uthman",
                   icon: <AiFillLinkedin size={24} />,
                 },
-              ].map(({ link, icon }) => {
+              ].map(({ link, icon, name }) => {
                 return (
-                  <div
+                  <Link
+                    href={`http://www.${link}`}
+                    target='_blank'
+                    rel='noopener noreferrer'
                     key={link}
-                    className='p-[14px] hover:bg-primary hover:text-white bg-secondary rounded-md'
                   >
-                    <a
-                      href={`http://www.${link}`}
-                      target='_blank'
-                      rel='noopener noreferrer'
+                    <div
+                      className='p-[14px] hover:bg-primary hover:text-white bg-secondary rounded-md'
+                      title={name}
                     >
                       {icon}
-                    </a>
-                  </div>
+                    </div>
+                  </Link>
                 );
               })}
             </div>

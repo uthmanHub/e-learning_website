@@ -52,7 +52,7 @@ const page = () => {
                       <Link
                         href={`/course/${title}`}
                         className='size-fit py-[14px] px-5 font-[500] min-w-fit rounded-md border  bg-secondary text-gray15 text-[14px] lg:text-[18px] lg:leading-[27px] '
-                      >
+                        >
                         View Course
                       </Link>
                     </div>
@@ -63,6 +63,10 @@ const page = () => {
                       <div className='grid grid-cols-3 gap-2 w-full max-w-full md:gap-4'>
                         {images.map(imgSrc => {
                           return (
+                            <Link
+                              href={`/course/${title}`}
+                              key={imgSrc}
+                            >
                             <Image
                               key={imgSrc}
                               src={imgSrc}
@@ -71,9 +75,10 @@ const page = () => {
                               height={100}
                               priority
                               className='w-full h-full object-cover'
-                            />
-                          );
-                        })}
+                              />
+                        </Link>
+                              );
+                              })}
                       </div>
 
                       <div className='flex flex-col gap-10  '>
